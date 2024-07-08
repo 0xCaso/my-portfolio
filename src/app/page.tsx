@@ -15,6 +15,7 @@ export default function Home() {
   thirdFireRef.current?.setSpeed(0.6);
 
   const [nameHovered, setNameHovered] = useState(false);
+  const [dragonHovered, setDragonHovered] = useState(false);
 
   const handleNameHover = () => {
     setNameHovered(!nameHovered);
@@ -24,7 +25,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between py-12 px-24 bg-base-100 text-8xl">
       <Lottie
         animationData={Dragon}
-        className="absolute -left-0 w-[700px] -top-40 z-10"
+        className={`absolute -left-0 w-[700px] -top-40 z-10 transition-all duration-200 ${
+          dragonHovered ? "scale-[0.8]" : "scale-100"
+        }`}
+        onMouseOver={() => setDragonHovered(true)}
+        onMouseOut={() => setDragonHovered(false)}
       />
       {/* LEFT FIRE */}
       <Lottie
