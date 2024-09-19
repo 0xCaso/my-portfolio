@@ -1,4 +1,6 @@
-import React, { Dispatch, SetStateAction } from "react";
+"use client";
+
+import React from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -10,41 +12,31 @@ import {
   IconTrophy,
 } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
-import { Section } from "@/app/page";
+import { usePathname } from "next/navigation";
 
-export function FloatingDockCustom({
-  sections,
-  currentSection,
-  setSection,
-}: {
-  sections: string[];
-  currentSection: string;
-  setSection: (newSection: Section) => void;
-}) {
+export const Footer = () => {
+  const pathname = usePathname();
+
   const links = [
     {
       title: "Home",
       icon: <IconHome className="h-full w-full text-zinc-400" />,
-      href: "#",
-      section: Section.HOME,
+      href: "/",
     },
     {
       title: "Experience",
       icon: <IconBriefcase2 className="h-full w-full text-zinc-400" />,
-      href: "#",
-      section: Section.EXPERIENCE,
+      href: "/experience",
     },
     {
       title: "Hackathons",
       icon: <IconTrophy className="h-full w-full text-zinc-400" />,
-      href: "#",
-      section: Section.HACKATHONS,
+      href: "/hackathons",
     },
     {
       title: "Projects",
       icon: <IconPalette className="h-full w-full text-zinc-400" />,
-      href: "#",
-      section: Section.PROJECTS,
+      href: "/projects",
     },
     {
       title: "Mail",
@@ -67,38 +59,21 @@ export function FloatingDockCustom({
       href: "https://twitter.com/yourusername",
     },
   ];
-  return (
-    <div className="flex items-center justify-center w-full p-8">
-      <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links.map((link) => ({
-          ...link,
-          onClick: link.section
-            ? () => setSection(link.section as Section)
-            : undefined,
-          active: link.section === currentSection,
-        }))}
-      />
-    </div>
-  );
-}
 
-export const Footer = ({
-  sections,
-  currentSection,
-  setSection,
-}: {
-  sections: string[];
-  currentSection: string;
-  setSection: (newSection: Section) => void;
-}) => {
   return (
     <footer className="flex-shrink-0 bg-base-100 z-20 w-full fixed bottom-0">
-      <FloatingDockCustom
-        sections={sections}
-        currentSection={currentSection}
-        setSection={setSection}
-      />
+      <div className="flex items-center justify-center w-full p-8">
+        <FloatingDock
+          items={links.map((link) => ({
+            ...link,
+            active: link.href === pathname,
+            onClick:
+              link.href.startsWith("http") || link.href.startsWith("mailto")
+                ? undefined
+                : () => {},
+          }))}
+        />
+      </div>
     </footer>
   );
 };

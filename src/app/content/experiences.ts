@@ -1,6 +1,16 @@
 export const experiences = [
   {
     title: "Blockchain Developer",
+    company: "Builders Garden",
+    type: "Self-employed",
+    date: "Sep 2024 - Present",
+    location: "Remote",
+    description: "Building consumer-friendly apps, farcaster frames, etc..",
+    image: "/bg_logo.png",
+    skills: ["TypeScript", "React.js"],
+  },
+  {
+    title: "Blockchain Developer",
     company: "1delta",
     type: "Self-employed",
     date: "Sep 2023 - Present",
