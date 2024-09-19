@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { experiences } from "./content/experiences";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export enum Section {
   HOME = "home",
@@ -46,9 +47,10 @@ export default function Home() {
     <main className="flex flex-col h-screen bg-base-100 overflow-hidden">
       <header className="flex-shrink-0 bg-base-100 p-6 w-full z-10">
         <div className="flex w-full justify-between">
-          <h2 className="text-white text-6xl font-['Ribes_Regular']">
-            {activeSection.toUpperCase()}
-          </h2>
+          <FlipWords
+            word={activeSection.toUpperCase()} // Use FlipWords component with a single word
+            className="text-white text-6xl font-['Ribes_Regular']"
+          />
           <h1 className="text-white text-6xl font-['Ribes_Regular']">
             MATTEO CASONATO
           </h1>
@@ -78,7 +80,7 @@ export default function Home() {
           <div
             className={cn(
               sectionClass(Section.EXPERIENCE),
-              "p-8 space-y-8 min-h-full overflow-y-auto no-scrollbar",
+              "p-8 space-y-8 min-h-full overflow-y-auto",
             )}
           >
             {experiences.map((exp, index) => (
