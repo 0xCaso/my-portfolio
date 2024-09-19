@@ -4,33 +4,44 @@
 
 @layer base {
   @font-face {
-    font-family: "Mioge";
+    font-family: "Permola";
     font-style: normal;
     font-weight: 400;
     src:
-      local("Mioge"),
-      url("https://fonts.cdnfonts.com/s/91258/MiogeFreeTrial-WyBMz.woff")
+      local("Permola"),
+      url("https://fonts.cdnfonts.com/s/88661/permola-display.woff")
         format("woff");
   }
 
   @font-face {
-    font-family: "Reverie";
+    font-family: "Urbanist";
     font-style: normal;
     font-weight: 400;
     src:
-      local("Reverie"),
-      url("https://fonts.cdnfonts.com/s/107506/reverie-regular-personal-use-only.woff")
+      local("Urbanist"),
+      url("https://fonts.cdnfonts.com/s/107254/Urbanist[wght].woff")
         format("woff");
   }
 
   @font-face {
-    font-family: "Ophelia";
+    font-family: "Ribes Regular";
     font-style: normal;
     font-weight: 400;
-    src:
-      local("Ophelia"),
-      url("https://fonts.cdnfonts.com/s/107158/ophelia-personal-use-only.woff")
-        format("woff");
+    src: url("/assets/fonts/Ribes/Ribes-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Ribes Light";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/assets/fonts/Ribes/Ribes-Light.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Ribes Black";
+    font-style: normal;
+    font-weight: 900;
+    src: url("/assets/fonts/Ribes/Ribes-Black.otf") format("opentype");
   }
 
   :root {
@@ -95,5 +106,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

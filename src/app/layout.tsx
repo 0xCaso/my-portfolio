@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-[Ophelia]">
+      <body className="font-[Urbanist]">
         <BackgroundGradientAnimation>{children}</BackgroundGradientAnimation>
       </body>
     </html>
