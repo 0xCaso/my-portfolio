@@ -68,7 +68,7 @@ export function FloatingDockCustom({
     },
   ];
   return (
-    <div className="flex items-center justify-center w-full py-10">
+    <div className="flex items-center justify-center w-full p-8">
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links.map((link) => ({
@@ -93,7 +93,7 @@ export const Footer = ({
   setSection: (newSection: Section) => void;
 }) => {
   return (
-    <footer className="flex-shrink-0 bg-base-100 z-20">
+    <footer className="flex-shrink-0 bg-base-100 z-20 w-full fixed bottom-0">
       <FloatingDockCustom
         sections={sections}
         currentSection={currentSection}

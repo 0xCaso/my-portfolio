@@ -44,8 +44,8 @@ export default function Home() {
     });
 
   return (
-    <main className="flex flex-col h-screen bg-base-100 overflow-hidden">
-      <header className="flex-shrink-0 bg-base-100 p-6 w-full z-10">
+    <main className="flex flex-col min-h-screen bg-base-100">
+      <header className="flex-shrink-0 bg-base-100 p-8 w-full z-10">
         <div className="flex w-full justify-between">
           <FlipWords
             word={activeSection.toUpperCase()} // Use FlipWords component with a single word
@@ -57,12 +57,12 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="flex-grow flex items-center justify-center px-4 py-8 z-10">
-        <div className="relative w-full max-w-4xl h-[70vh] rounded-2xl bg-zinc-800 bg-opacity-50 overflow-hidden">
+      <div className="flex items-center justify-center z-10 overflow-auto">
+        <div className="relative w-full max-w-4xl h-[calc(100vh-16rem)] rounded-2xl bg-zinc-800 bg-opacity-50 overflow-hidden">
           <div
             className={cn(
               sectionClass(Section.HOME),
-              "text-white p-8 flex flex-col items-center justify-center",
+              "text-white p-8 flex flex-col items-center justify-center h-full",
             )}
           >
             <h1 className="text-4xl font-bold mb-4">Hi, I'm Matteo</h1>
@@ -80,7 +80,7 @@ export default function Home() {
           <div
             className={cn(
               sectionClass(Section.EXPERIENCE),
-              "p-8 space-y-8 min-h-full overflow-y-auto",
+              "p-8 space-y-8 h-full overflow-y-auto",
             )}
           >
             {experiences.map((exp, index) => (
