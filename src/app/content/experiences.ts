@@ -42,4 +42,15 @@ export const experiences = [
       "Deep dive into SSI primitives (DIDs, VCs, VPs, ZKPs...). Integration of blockchain and SSI technologies with IAM solutions.",
     skills: ["TypeScript"],
   },
+  {
+    title: "SSI Developer Intern",
+    company: "Monokee",
+    type: "Internship",
+    date: "Jul 2022 - Sep 2022",
+    location: "Padua, Italy",
+    image: "/monokee_logo.jpeg",
+    description:
+      "Deep dive into SSI primitives (DIDs, VCs, VPs, ZKPs...). Integration of blockchain and SSI technologies with IAM solutions.",
+    skills: ["TypeScript"],
+  },
 ];
