@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import { EmblaCarouselType } from "embla-carousel";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -55,12 +56,12 @@ type PropType = ComponentPropsWithRef<"button">;
 
 export const PrevButton: React.FC<PropType> = (props) => (
   <button {...props} className="embla__button embla__button--prev">
-    &lt;
+    <IconChevronLeft className="h-full w-full text-zinc-400" />
   </button>
 );
 
 export const NextButton: React.FC<PropType> = (props) => (
   <button {...props} className="embla__button embla__button--next">
-    &gt;
+    <IconChevronRight className="h-full w-full text-zinc-400" />
   </button>
 );

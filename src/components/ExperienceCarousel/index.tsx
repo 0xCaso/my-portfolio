@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import ExperienceCard from "../ExperienceCard";
 import { experiences } from "@/app/content/experiences";
 import { PrevButton, NextButton } from "./CarouselArrowButtons";
+import { useDotButton } from "./CarouselDotButton";
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -15,13 +16,14 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
   const { options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     ...options,
-    slidesToScroll: 1,
     align: "start",
   });
 
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
+
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -36,7 +38,6 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
     if (!emblaApi) return;
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
-    setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -63,11 +64,11 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
           <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
         </div>
         <div className="embla__dots">
-          {experiences.map((_, index) => (
+          {scrollSnaps.map((_, index) => (
             <button
               key={index}
               className={`embla__dot${index === selectedIndex ? " embla__dot--selected" : ""}`}
-              onClick={() => emblaApi?.scrollTo(index)}
+              onClick={() => onDotButtonClick(index)}
             />
           ))}
         </div>
