@@ -1,21 +1,24 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import ExperienceCard from "../ExperienceCard";
-import { experiences } from "@/app/content/experiences";
 import { PrevButton, NextButton } from "./CarouselArrowButtons";
 import { useDotButton } from "./CarouselDotButton";
 
-type PropType = {
-  options?: EmblaOptionsType;
-};
+interface PropType {
+  children: React.ReactNode;
+  slidesToScroll?: number;
+  loop?: boolean;
+}
 
-const ExperienceCarousel: React.FC<PropType> = (props) => {
-  const { options } = props;
+const Carousel: React.FC<PropType> = ({
+  children,
+  slidesToScroll = 4,
+  loop = false,
+}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    ...options,
+    loop,
+    slidesToScroll,
     align: "start",
   });
 
@@ -50,13 +53,7 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {experiences.map((exp, index) => (
-            <div className="embla__slide" key={index}>
-              <ExperienceCard {...exp} />
-            </div>
-          ))}
-        </div>
+        <div className="embla__container">{children}</div>
       </div>
       {(!prevBtnDisabled || !nextBtnDisabled) && (
         <div className="embla__controls flex justify-between items-center mt-4">
@@ -79,4 +76,4 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
   );
 };
 
-export default ExperienceCarousel;
+export default Carousel;
