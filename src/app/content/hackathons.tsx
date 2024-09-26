@@ -7,8 +7,9 @@ export const hackathons = [
     description:
       "Developed 1in1million game as XMTP bot with Farcaster OpenFrames, Chainlink VRF for randomness and Web3auth for authentication on the webapp.",
     tags: ["XMTP", "Chainlink", "Web3auth"],
-    github: "",
-    website: "",
+    github: "https://github.com/builders-garden/xmtp-1in1million",
+    website: "https://a-milly.vercel.app/",
+    image: "/hackathons/milionario.png",
   },
   {
     project: "SnappyAI",
@@ -18,8 +19,9 @@ export const hackathons = [
     description:
       "Developed a custom v4 hook for PancakeSwap and helped w the React Frontend. Winner with Metamask Snap and Blockscout.",
     tags: ["Metamask", "Brian", "PancakeSwap"],
-    github: "",
-    website: "",
+    github: "https://github.com/Che-Scoppiati/SnappyAI",
+    website: "https://snappyai.vercel.app/",
+    image: "/hackathons/snappy_ai.png",
   },
   {
     project: "Shopycast",
@@ -29,8 +31,9 @@ export const hackathons = [
     description:
       "Shopify integration with Farcaster. Build in seconds your Shopify frame and let users fill their cart directly on Farcaster.",
     tags: ["Farcaster", "Shopify", "Base"],
-    github: "",
-    website: "",
+    github: "https://github.com/Che-Scoppiati/shopycast",
+    website: "https://shopycast.xyz/",
+    image: "/hackathons/shopycast.png",
   },
   {
     project: "JPEG Station",
@@ -40,8 +43,9 @@ export const hackathons = [
     description:
       "Frontend for JPEG Station, Cross-chain swaps between NFTs and Ordinals with Near chain-signatures. Winner with Near.",
     tags: ["Near", "Ordinals", "NFT"],
-    github: "",
-    website: "",
+    github: "https://github.com/0xCaso/jpeg-station",
+    website: "https://jpeg-station.vercel.app/",
+    image: "/hackathons/jpeg_station.png",
   },
   {
     project: "eulSynths",
@@ -51,8 +55,9 @@ export const hackathons = [
     description:
       "eulSynths is a universal DeFi yield product platform built on Euler and Balancer. The protocol allows users to leverage DEX liquidity from protocols like Balancer to multiply their intrinsic yield.",
     tags: ["DeFi", "Euler", "Balancer"],
-    github: "",
-    website: "",
+    github: "https://github.com/1delta-DAO/eth-denver-eul-synths",
+    website: "https://eth-denver-eul-synths.vercel.app/",
+    image: "/hackathons/eulsynths.png",
   },
   {
     project: "FairPetuals",
@@ -62,8 +67,9 @@ export const hackathons = [
     description:
       "FairPetual is the first perpetuals platform that allows for fair liquidations where anyone can earn a share of fee income by spotting positions that can be liquidated early and execute the liquidations themselves.",
     tags: ["DeFi", "Aleph Zero"],
-    github: "",
-    website: "",
+    github: "https://github.com/1delta-DAO/ctrl-plus-fairpetual",
+    website: "https://ctrl-plus-fairpetual-frontend.vercel.app/",
+    image: "/hackathons/fairpetuals.png",
   },
   {
     project: "BountyArena",
@@ -73,8 +79,9 @@ export const hackathons = [
     description:
       "Fronted Dev for BountyArena Leveraging the Blockchain to help companies create and fund opensource solution to their problems with reputation. Winner with TalentLayer, The Graph, ENS.",
     tags: ["TalentLayer", "The Graph", "ENS"],
-    github: "",
-    website: "",
+    github: "https://github.com/bianc8/BountyArena",
+    website: "https://bountyarena.vercel.app/",
+    image: "/hackathons/bountyarena.png",
   },
   {
     project: "Sismord",
@@ -84,8 +91,9 @@ export const hackathons = [
     description:
       "Built the Frontend in React for Sismord: Gated access to Discord servers leveraging blockchain and Sismo data vaults. Winner of Best data aggregation with Sismo @ETHDam 2023.",
     tags: ["Sismo"],
-    github: "",
-    website: "",
+    github: "https://github.com/0xCaso/sismord-discord-bot",
+    website: "https://devfolio.co/projects/sismord-af06",
+    image: "/hackathons/sismord.png",
   },
   {
     project: "FantaCrypto",
@@ -95,8 +103,9 @@ export const hackathons = [
     description:
       "Built the Frontend in React for Sismord: Gated access to Discord servers leveraging blockchain and Sismo data vaults. Winner of Best data aggregation with Sismo @ETHDam 2023.",
     tags: ["API3"],
-    github: "",
-    website: "",
+    github: "https://github.com/0xCaso/FantaCrypto/tree/main",
+    website: "https://devfolio.co/projects/fantacrypto-f046",
+    image: "/hackathons/fantacrypto.png",
   },
   {
     project: "Sismord",
@@ -106,7 +115,8 @@ export const hackathons = [
     description:
       "Built the Frontend in React for Sismord: Gated access to Discord servers leveraging blockchain and Sismo data vaults. Winner of Best data aggregation with Sismo @ETHDam 2023.",
     tags: ["Sismo"],
-    github: "",
-    website: "",
+    github: "https://github.com/0xCaso/sismord-discord-bot",
+    website: "https://devfolio.co/projects/sismord-af06",
+    image: "/hackathons/sismord.png",
   },
 ];

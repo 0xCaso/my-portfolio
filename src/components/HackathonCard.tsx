@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 interface HackathonCardProps {
   project: string;
   hackathon: string;
@@ -7,6 +10,7 @@ interface HackathonCardProps {
   tags?: string[];
   github?: string;
   website?: string;
+  image?: string;
 }
 
 const HackathonCard: React.FC<HackathonCardProps> = ({
@@ -18,10 +22,22 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
   tags,
   github,
   website,
+  image,
 }) => {
   return (
     <div className="h-full w-full rounded-2xl p-8 transition-all duration-300 hover:bg-zinc-400 hover:bg-opacity-10 border border-zinc-800 hover:border-opacity-0 hover:scale-[101%]">
       <div className="card rounded-xl flex flex-col gap-8 h-full transition-all duration-300">
+        <div className="flex items-center justify-center">
+          <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 outline outline-zinc-800 outline-offset-4">
+            <Image
+              src={"/assets/img" + image}
+              alt={project}
+              width={120}
+              height={120}
+              className="scale-[102%]"
+            />
+          </div>
+        </div>
         <div className="text-center text-zinc-400 text-sm flex flex-col gap-1">
           <h3 className="text-2xl font-['Ribes_Regular'] text-zinc-100">
             {project}
@@ -48,14 +64,22 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
         {/* Add links for GitHub and website if provided */}
         <div className="flex justify-center gap-4 mt-4">
           {github && (
-            <a href={github} className="text-blue-500 underline">
+            <Link
+              href={github}
+              className="text-blue-500 underline"
+              target="_blank"
+            >
               GitHub
-            </a>
+            </Link>
           )}
           {website && (
-            <a href={website} className="text-blue-500 underline">
+            <Link
+              href={website}
+              className="text-blue-500 underline"
+              target="_blank"
+            >
               Website
-            </a>
+            </Link>
           )}
         </div>
       </div>

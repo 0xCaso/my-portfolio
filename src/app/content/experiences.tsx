@@ -14,7 +14,7 @@ export const experiences = [
     ),
     location: "Remote 🌍",
     description: "Building consumer-friendly apps, farcaster frames, etc..",
-    image: "/bg_logo.png",
+    image: "/experiences/bg_logo.png",
     skills: ["TypeScript", "React.js"],
   },
   {
@@ -33,7 +33,7 @@ export const experiences = [
     location: "Remote 🌍",
     description:
       "Development of 1delta interface with React.js, integrating multiple EVM chains, and integrating with 1delta API.",
-    image: "/1delta_logo.jpeg",
+    image: "/experiences/1delta_logo.jpeg",
     skills: ["TypeScript", "React.js"],
   },
   {
@@ -42,7 +42,7 @@ export const experiences = [
     type: "Internship",
     date: "Nov 2022 - Aug 2023",
     location: "Zug, Switzerland 🇨🇭",
-    image: "/web3foundation_logo.jpeg",
+    image: "/experiences/web3foundation_logo.jpeg",
     description:
       "Grants Team tasks: Evaluation of the milestone deliveries from a technical perspective (code quality, functionalities).",
     skills: ["Typescript"],
@@ -53,7 +53,7 @@ export const experiences = [
     type: "Internship",
     date: "Jul 2022 - Sep 2022",
     location: "Padua, Italy 🇮🇹",
-    image: "/monokee_logo.jpeg",
+    image: "/experiences/monokee_logo.jpeg",
     description:
       "Deep dive into SSI primitives (DIDs, VCs, VPs, ZKPs...). Integration of blockchain and SSI technologies with IAM solutions.",
     skills: ["TypeScript"],
