@@ -58,21 +58,23 @@ const ExperienceCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
-      <div className="embla__controls flex justify-between items-center mt-4">
-        <div className="flex space-x-2">
-          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+      {(!prevBtnDisabled || !nextBtnDisabled) && (
+        <div className="embla__controls flex justify-between items-center mt-4">
+          <div className="flex space-x-2">
+            <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+            <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+          </div>
+          <div className="embla__dots">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                className={`embla__dot${index === selectedIndex ? " embla__dot--selected" : ""}`}
+                onClick={() => onDotButtonClick(index)}
+              />
+            ))}
+          </div>
         </div>
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <button
-              key={index}
-              className={`embla__dot${index === selectedIndex ? " embla__dot--selected" : ""}`}
-              onClick={() => onDotButtonClick(index)}
-            />
-          ))}
-        </div>
-      </div>
+      )}
     </div>
   );
 };

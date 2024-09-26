@@ -4,7 +4,6 @@ import React from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
-  IconBrandX,
   IconBriefcase2,
   IconHome,
   IconMail,
@@ -46,18 +45,20 @@ export const Footer = () => {
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-zinc-400" />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/0xCaso",
+      target: "_blank",
     },
     {
       title: "LinkedIn",
       icon: <IconBrandLinkedin className="h-full w-full text-zinc-400" />,
-      href: "https://www.linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/matteo-casonato/",
+      target: "_blank",
     },
-    {
-      title: "Twitter",
-      icon: <IconBrandX className="h-full w-full text-zinc-400" />,
-      href: "https://twitter.com/yourusername",
-    },
+    // {
+    //   title: "Twitter",
+    //   icon: <IconBrandX className="h-full w-full text-zinc-400" />,
+    //   href: "https://twitter.com/yourusername",
+    // },
   ];
 
   return (

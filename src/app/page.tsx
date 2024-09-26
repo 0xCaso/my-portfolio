@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center z-10 overflow-auto h-[calc(100vh-16rem)] m-auto">
+    <div className="flex items-center justify-center z-10 overflow-auto h-[calc(100vh-16rem)] m-auto animate-appear">
       <div className="relative w-full max-w-4xl rounded-2xl bg-zinc-800 bg-opacity-50 overflow-hidden">
         <div
           className={cn(

@@ -3,7 +3,15 @@ export const experiences = [
     title: "Blockchain Developer",
     company: "Builders Garden",
     type: "Self-employed",
-    date: "Sep 2024 - Present",
+    date: (
+      <div className="flex justify-center gap-1">
+        <p>Sep 2024</p>
+        <p>-</p>
+        <p className="underline underline-offset-2 decoration-2 decoration-green-500">
+          Present
+        </p>
+      </div>
+    ),
     location: "Remote",
     description: "Building consumer-friendly apps, farcaster frames, etc..",
     image: "/bg_logo.png",
@@ -13,7 +21,15 @@ export const experiences = [
     title: "Blockchain Developer",
     company: "1delta",
     type: "Self-employed",
-    date: "Sep 2023 - Present",
+    date: (
+      <div className="flex justify-center gap-1">
+        <p>Sep 2023</p>
+        <p>-</p>
+        <p className="underline underline-offset-2 decoration-2 decoration-green-500">
+          Present
+        </p>
+      </div>
+    ),
     location: "Remote",
     description:
       "Development of 1delta interface with React.js, integrating multiple EVM chains, and integrating with 1delta API.",

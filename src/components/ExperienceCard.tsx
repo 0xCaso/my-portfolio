@@ -3,8 +3,7 @@ import Image from "next/image";
 interface ExperienceCardProps {
   title: string;
   company: string;
-  type: string;
-  date: string;
+  date: string | JSX.Element;
   location: string;
   description: string;
   image: string;
@@ -14,7 +13,6 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
   title,
   company,
-  type,
   date,
   location,
   description,
@@ -35,13 +33,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             />
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center text-zinc-400 text-sm">
           <h3 className="text-2xl mb-1 font-['Ribes_Regular'] text-zinc-100">
             {title}
           </h3>
           <p className="text-lg text-zinc-300 font-bold">{company}</p>
-          <p className="text-sm text-zinc-400">{date}</p>
-          <p className="text-sm text-zinc-400">{location}</p>
+          {typeof date === "string" ? <p>{date}</p> : date}
+          <p>{location}</p>
         </div>
         <p className="text-sm text-zinc-300 text-center flex-grow">
           {description}
