@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Matteo Casonato Portfolio",
+  title: "Matteo Casonato",
   description: "Portfolio website of Matteo Casonato",
 };
 
