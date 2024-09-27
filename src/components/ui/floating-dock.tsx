@@ -128,10 +128,10 @@ const FloatingDockDesktop = ({
       )}
     >
       {items.map((item, index) => (
-        <>
-          <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <div key={index} className="flex gap-2">
+          <IconContainer mouseX={mouseX} {...item} />
           {index === 3 && <div className="w-px h-8 bg-zinc-600 self-center" />}
-        </>
+        </div>
       ))}
     </motion.div>
   );
