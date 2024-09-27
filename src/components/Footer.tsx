@@ -19,38 +19,42 @@ export const Footer = () => {
   const links = [
     {
       title: "Home",
-      icon: <IconHome className="h-full w-full text-zinc-400" />,
+      icon: <IconHome className="h-full w-full text-zinc-300 stroke-1" />,
       href: "/",
     },
     {
       title: "Experience",
-      icon: <IconBriefcase2 className="h-full w-full text-zinc-400" />,
+      icon: <IconBriefcase2 className="h-full w-full text-zinc-300 stroke-1" />,
       href: "/experience",
     },
     {
       title: "Hackathons",
-      icon: <IconTrophy className="h-full w-full text-zinc-400" />,
+      icon: <IconTrophy className="h-full w-full text-zinc-300 stroke-1" />,
       href: "/hackathons",
     },
     {
       title: "Projects",
-      icon: <IconPalette className="h-full w-full text-zinc-400" />,
+      icon: <IconPalette className="h-full w-full text-zinc-300 stroke-1" />,
       href: "/projects",
     },
     {
       title: "Mail",
-      icon: <IconMail className="h-full w-full text-zinc-400" />,
+      icon: <IconMail className="h-full w-full text-zinc-300 stroke-1" />,
       href: "mailto:your.email@example.com",
     },
     {
       title: "GitHub",
-      icon: <IconBrandGithub className="h-full w-full text-zinc-400" />,
+      icon: (
+        <IconBrandGithub className="h-full w-full text-zinc-300 stroke-1" />
+      ),
       href: "https://github.com/0xCaso",
       target: "_blank",
     },
     {
       title: "LinkedIn",
-      icon: <IconBrandLinkedin className="h-full w-full text-zinc-400" />,
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-zinc-300 stroke-1" />
+      ),
       href: "https://www.linkedin.com/in/matteo-casonato/",
       target: "_blank",
     },

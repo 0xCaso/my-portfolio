@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import { IconBrandGithub, IconWorld } from "@tabler/icons-react";
 
 interface HackathonCardProps {
   project: string;
@@ -68,37 +71,38 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
                 ))}
               </div>
             )}
-            {/* Add links for GitHub and website if provided */}
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex justify-center gap-4">
               {github && (
                 <Link
                   href={github}
-                  className="text-blue-500 underline"
                   target="_blank"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
                 >
-                  GitHub
+                  <IconBrandGithub className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
                 </Link>
               )}
               {website && (
                 <Link
                   href={website}
-                  className="text-blue-500 underline"
                   target="_blank"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
                 >
-                  Website
+                  <IconWorld className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
                 </Link>
               )}
             </div>
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
+      <DialogContent className="bg-zinc-900 border-none text-zinc-200">
+        <DialogHeader className="gap-4">
           <DialogTitle>Description</DialogTitle>
-          <DialogDescription>
-            <p className="text-sm text-zinc-300 text-center flex-grow">
-              {description}
-            </p>
+          <DialogDescription className="text-zinc-400">
+            {description}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

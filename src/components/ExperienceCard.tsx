@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Dialog,
@@ -7,6 +9,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import Link from "next/link";
+import { IconBrandGithub, IconBrandX, IconWorld } from "@tabler/icons-react";
 
 interface ExperienceCardProps {
   title: string;
@@ -16,6 +20,9 @@ interface ExperienceCardProps {
   description: string;
   image: string;
   skills?: string[];
+  github?: string;
+  twitter?: string;
+  website?: string;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -26,6 +33,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   description,
   image,
   skills,
+  github,
+  twitter,
+  website,
 }) => {
   return (
     <Dialog>
@@ -63,16 +73,49 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 ))}
               </div>
             )}
+            <div className="flex justify-center gap-4">
+              {github && (
+                <Link
+                  href={github}
+                  target="_blank"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <IconBrandGithub className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
+                </Link>
+              )}
+              {twitter && (
+                <Link
+                  href={twitter}
+                  target="_blank"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <IconBrandX className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
+                </Link>
+              )}
+              {website && (
+                <Link
+                  href={website}
+                  target="_blank"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <IconWorld className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
+      <DialogContent className="bg-zinc-900 border-none text-zinc-200">
+        <DialogHeader className="gap-4">
           <DialogTitle>Description</DialogTitle>
-          <DialogDescription>
-            <p className="text-sm text-zinc-300 text-center flex-grow">
-              {description}
-            </p>
+          <DialogDescription className="text-zinc-400">
+            {description}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
