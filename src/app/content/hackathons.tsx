@@ -1,5 +1,35 @@
 export const hackathons = [
   {
+    project: "NaaamoFit",
+    hackathon: "ETHRome 2024",
+    location: "Rome 🇮🇹",
+    date: "October 2024",
+    description:
+      "NaaamoFit is a platform that allows gyms to accept cryptocurrency payments easily through Account Abstraction, offering a Web2-like experience. Users earn cashback rewards based on the time spent at the gym, incentivizing consistent attendance and engagement.",
+    tags: ["Superfluid", "Privy", "Pimlico"],
+    github: "https://github.com/builders-garden/naaamofit",
+    website: "https://naaamofit.vercel.app/",
+    image: "/hackathons/naaamofit.png",
+    prizes: [
+      {
+        place: "2",
+        text: "Account Abstraction Track: 2nd Prize",
+      },
+      {
+        place: "1",
+        text: "Superfluid: 1st Prize",
+      },
+      {
+        place: "1",
+        text: "Privy: 1st Prize",
+      },
+      {
+        place: "1",
+        text: "Pimlico: 1st Prize",
+      },
+    ],
+  },
+  {
     project: "Milionario",
     hackathon: "ETHOnline 2024",
     location: "Online 🌍",

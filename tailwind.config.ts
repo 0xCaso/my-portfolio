@@ -121,7 +121,18 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        ".mask-radial-fade": {
+          "mask-image":
+            "radial-gradient(circle, rgb(0 0 0) 61%, rgb(0 0 0 / 0%) 70%)",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 } satisfies Config;
 
 export default config;

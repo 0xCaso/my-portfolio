@@ -40,7 +40,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="h-full w-full rounded-2xl p-8 transition-all duration-300 hover:bg-zinc-400 hover:bg-opacity-10 border border-zinc-700 hover:border-opacity-0 hover:scale-[101%] hover:cursor-pointer">
+        <div className="h-full w-full rounded-2xl p-8 transition-all duration-300 hover:bg-zinc-400 hover:bg-opacity-10 border border-zinc-700 hover:border-opacity-0 hover:cursor-pointer">
           <div className="card rounded-xl flex flex-col gap-8 h-full transition-all duration-300">
             <div className="flex items-center justify-center">
               <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 outline outline-zinc-700 outline-offset-4">
@@ -111,10 +111,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-none text-zinc-200">
+      <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-2xl">
         <DialogHeader className="gap-4">
-          <DialogTitle>Description</DialogTitle>
-          <DialogDescription className="text-zinc-400">
+          <DialogTitle className="text-2xl">Description</DialogTitle>
+          <DialogDescription className="text-zinc-400 text-lg">
             {description}
           </DialogDescription>
         </DialogHeader>
