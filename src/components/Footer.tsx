@@ -67,7 +67,7 @@ export const Footer = () => {
 
   return (
     <footer className="flex-shrink-0 bg-base-100 z-20 w-full fixed bottom-0">
-      <div className="flex items-center justify-center w-full p-8">
+      <div className="flex items-center justify-center w-full md:p-8 p-4">
         <FloatingDock
           items={links.map((link) => ({
             ...link,

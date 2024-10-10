@@ -188,7 +188,7 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #7e7e7e;
     margin: 0 0.25rem;
     padding: 0;
     border: none;
@@ -197,5 +197,11 @@
   }
   .embla__dot--selected {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .embla__slide {
+      min-width: 20rem;
+    }
   }
 }

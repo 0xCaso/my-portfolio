@@ -9,16 +9,18 @@ interface PropType {
   children: React.ReactNode;
   slidesToScroll?: number;
   loop?: boolean;
+  isMobile: boolean;
 }
 
 const Carousel: React.FC<PropType> = ({
   children,
   slidesToScroll = 4,
   loop = false,
+  isMobile,
 }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop,
-    slidesToScroll,
+    slidesToScroll: isMobile ? 1 : slidesToScroll,
     align: "start",
   });
 
@@ -61,7 +63,7 @@ const Carousel: React.FC<PropType> = ({
             <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
             <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
           </div>
-          <div className="embla__dots">
+          <div className="embla__dots !mt-0">
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}

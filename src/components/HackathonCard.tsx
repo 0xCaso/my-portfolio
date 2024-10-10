@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
@@ -55,7 +54,7 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
             <div className="flex items-center justify-center">
               <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 outline outline-zinc-700 outline-offset-4">
                 {hackathon.prizes?.length && (
-                  <IconAward className="h-8 w-8 p-1 bg-zinc-700 rounded-full text-amber-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300 absolute top-8 right-24 z-10" />
+                  <IconAward className="h-8 w-8 p-[2px] border-2 border-zinc-700 bg-amber-400 rounded-full text-zinc-700 stroke-1 absolute top-8 right-24 z-10" />
                 )}
                 <Image
                   src={"/assets/img" + hackathon.image}
