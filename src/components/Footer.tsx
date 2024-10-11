@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const Footer = () => {
   const pathname = usePathname();
@@ -67,7 +68,8 @@ export const Footer = () => {
 
   return (
     <footer className="flex-shrink-0 bg-base-100 z-20 w-full fixed bottom-0">
-      <div className="flex items-center justify-center w-full md:p-8 p-4">
+      {/* DESKTOP */}
+      <div className="items-center justify-center w-full p-8 hidden md:flex">
         <FloatingDock
           items={links.map((link) => ({
             ...link,
@@ -78,6 +80,34 @@ export const Footer = () => {
                 : () => {},
           }))}
         />
+      </div>
+      {/* MOBILE */}
+      <div className="flex md:hidden gap-4 p-3 w-full justify-center">
+        {links.slice(0, 4).map((link, index) => (
+          <Link
+            key={index}
+            href={link.href}
+            className="flex flex-col w-full p-1"
+          >
+            {link.icon}
+            <div
+              className={`bg-zinc-300 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
+            />
+          </Link>
+        ))}
+        <div className="w-1 h-8 bg-zinc-500 self-center" />
+        {links.slice(4).map((link, index) => (
+          <Link
+            key={index}
+            href={link.href}
+            className="flex flex-col w-full p-1"
+          >
+            {link.icon}
+            <div
+              className={`bg-zinc-300 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
+            />
+          </Link>
+        ))}
       </div>
     </footer>
   );

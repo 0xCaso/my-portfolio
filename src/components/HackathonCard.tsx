@@ -23,7 +23,7 @@ const Prize: React.FC<{ place: HackathonPricePlace; text: string }> = ({
   place,
   text,
 }) => (
-  <div className="flex gap-2 items-center py-1">
+  <div className="flex gap-4 md:gap-2 items-center py-2 md:py-1">
     {place !== "pool" ? (
       <IconTrophy
         className={`h-8 w-8 p-1 bg-zinc-700 rounded-full ${place === "1" ? "text-amber-400" : place === "2" ? "text-zinc-300" : "text-orange-600"} stroke-1`}
@@ -33,7 +33,9 @@ const Prize: React.FC<{ place: HackathonPricePlace; text: string }> = ({
         className={`h-8 w-8 p-1 bg-zinc-700 rounded-full text-zinc-300 stroke-1`}
       />
     )}
-    <span className="text-lg">{text}</span>
+    <span className="text-base md:text-lg max-w-64 md:max-w-none leading-[1.1] md:leading-6">
+      {text}
+    </span>
   </div>
 );
 
@@ -50,7 +52,7 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
     <Dialog>
       <DialogTrigger asChild>
         <div className="h-full w-full rounded-2xl p-8 transition-all duration-300 hover:bg-zinc-400 hover:bg-opacity-10 border border-zinc-700 hover:border-opacity-0 hover:cursor-pointer overflow-visible">
-          <div className="card rounded-xl flex flex-col gap-8 h-full transition-all duration-300">
+          <div className="card rounded-xl flex flex-col gap-7 md:gap-8 h-full transition-all duration-300">
             <div className="flex items-center justify-center">
               <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 outline outline-zinc-700 outline-offset-4">
                 {hackathon.prizes?.length && (
@@ -125,12 +127,12 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-2xl h-fit">
+      <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-sm md:max-w-2xl h-fit p-4 md:p-6 rounded-xl md:rounded-2xl">
         <DialogTitle className="text-2xl">{hackathon.project}</DialogTitle>
         <div
-          className={`flex flex-col gap-4 overflow-auto max-h-[${screenHeight < 1100 ? "38rem" : "50rem"}]`}
+          className={`flex flex-col gap-4 overflow-auto max-h-[37rem] md:max-h-[${screenHeight < 1100 ? "38rem" : "50rem"}]`}
         >
-          <DialogDescription className="text-zinc-400 text-lg">
+          <DialogDescription className="text-zinc-400 text-base md:text-lg">
             {hackathon.description}
           </DialogDescription>
           {hackathon.videoDemoId && (
@@ -138,21 +140,21 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
               className={`flex w-fit m-auto border-2 border-zinc-700 p-2 rounded-2xl`}
             >
               <iframe
-                width="560"
-                height="315"
                 src={"https://www.youtube.com/embed/" + hackathon.videoDemoId}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className="rounded-xl"
+                className="rounded-xl w-[300px] md:w-[560px] md:h-[315px]"
               />
             </div>
           )}
           <div className="flex flex-col gap-2">
             <span className="text-xl font-bold">My contribution</span>
-            <span className="text-zinc-400 text-lg">{hackathon.myPart}</span>
+            <span className="text-zinc-400 text-base md:text-lg">
+              {hackathon.myPart}
+            </span>
           </div>
           {hackathon.prizes?.length && (
             <div className="flex flex-col gap-2">

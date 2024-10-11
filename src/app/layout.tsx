@@ -25,7 +25,7 @@ export default function RootLayout({
               alt="Matteo Casonato"
               width={1000}
               height={1000}
-              className="opacity-15 rounded-full absolute bottom-16 -right-24 z-0 mask-radial-fade"
+              className="opacity-15 rounded-full absolute bottom-32 md:bottom-16 -right-24 z-0 mask-radial-fade"
             />
             <Header />
             <main className="flex flex-grow">{children}</main>

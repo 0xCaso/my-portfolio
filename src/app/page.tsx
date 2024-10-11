@@ -2,22 +2,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center z-10 overflow-auto h-[calc(100vh-16rem)] m-auto animate-appear">
+    <div className="flex items-center justify-center z-10 overflow-auto h-[calc(100vh-11rem)] md:h-[calc(100vh-16rem)] m-auto animate-appear">
       <div className="relative w-full rounded-2xl bg-zinc-800 bg-opacity-70 overflow-hidden">
-        <div className="flex flex-col gap-12 text-white p-12 px-16 h-full text-center">
-          <h1 className="text-6xl font-bold font-['Ribes_Regular']">
+        <div className="flex flex-col gap-8 xs:gap-12 text-white p-6 xs:p-8 md:p-12 md:px-16 h-full text-center max-w-[22rem] xs:max-w-[23rem] md:max-w-none">
+          <h1 className="text-4xl md:text-6xl font-bold font-['Ribes_Regular']">
             Hi, I'm Matteo 🧙🏼
           </h1>
-          <div className="flex flex-col gap-4">
-            <p className="text-xl">
+          <div className="flex flex-col gap-4 text-[1.15rem] xs:text-xl">
+            <p>
               Blockchain Developer and Web3 enthusiast, focused on building
               frontends with a cool UX ✨
             </p>
-            <p className="text-xl">
-              I also love music 🎧 (specially electronic) and traveling ⛰️
-            </p>
+            <p>I also love music 🎧 (specially electronic) and traveling ⛰️</p>
           </div>
-          <div className="flex justify-center items-center gap-8">
+          <div className="flex flex-wrap gap-6 justify-center items-center">
             <Image
               src="/assets/img/home/nextjs.png"
               alt="Next.js"

@@ -111,10 +111,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-2xl">
+      <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-sm md:max-w-2xl h-fit p-4 md:p-6 rounded-xl md:rounded-2xl">
         <DialogHeader className="gap-4">
-          <DialogTitle className="text-2xl">Description</DialogTitle>
-          <DialogDescription className="text-zinc-400 text-lg">
+          <DialogTitle className="text-2xl text-left">Description</DialogTitle>
+          <DialogDescription className="text-zinc-400 text-lg text-left">
             {description}
           </DialogDescription>
         </DialogHeader>

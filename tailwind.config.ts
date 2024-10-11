@@ -119,6 +119,9 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         appear: "appear 0.5s ease-in-out",
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [

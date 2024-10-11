@@ -173,7 +173,6 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
   }
   .embla__button:disabled {
     opacity: 0.3;
