@@ -10,14 +10,14 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import Link from "next/link";
-import { IconBrandGithub, IconBrandX, IconWorld } from "@tabler/icons-react";
-import { Experience } from "@/app/content/experiences";
+import { IconBrandGithub, IconWorld } from "@tabler/icons-react";
+import { Project } from "@/app/content/projects";
 
-interface ExperienceCardProps {
-  experience: Experience;
+interface ProjectCardProps {
+  project: Project;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -26,8 +26,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             <div className="flex items-center justify-center">
               <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 outline outline-zinc-700 outline-offset-4">
                 <Image
-                  src={"/assets/img" + experience.image}
-                  alt={experience.company}
+                  src={"/assets/img" + project.image}
+                  alt={"project"}
                   width={120}
                   height={120}
                   className="scale-[102%]"
@@ -36,34 +36,27 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
             <div className="text-center text-zinc-400 text-sm flex flex-col gap-1">
               <h3 className="text-2xl font-['Ribes_Regular'] text-zinc-100">
-                {experience.title}
+                {project.name}
               </h3>
-              <p className="text-lg text-zinc-300 font-bold">
-                {experience.company}
-              </p>
-              {typeof experience.date === "string" ? (
-                <p>{experience.date}</p>
-              ) : (
-                experience.date
-              )}
-              <p>{experience.location}</p>
+              <p className="text-lg text-zinc-300 font-bold">{project.date}</p>
+              <p>{project.description}</p>
             </div>
-            {experience.skills && (
+            {project.tags && (
               <div className="flex flex-wrap gap-2 justify-center mt-auto">
-                {experience.skills.map((skill, index) => (
+                {project.tags.map((tag, index) => (
                   <span
                     key={index}
                     className="px-2 py-1 bg-zinc-700 text-zinc-300 rounded-full text-xs"
                   >
-                    {skill}
+                    {tag}
                   </span>
                 ))}
               </div>
             )}
             <div className="flex justify-center gap-4">
-              {experience.github && (
+              {project.github && (
                 <Link
-                  href={experience.github}
+                  href={project.github}
                   target="_blank"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -72,20 +65,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                   <IconBrandGithub className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
                 </Link>
               )}
-              {experience.twitter && (
+              {project.website && (
                 <Link
-                  href={experience.twitter}
-                  target="_blank"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                >
-                  <IconBrandX className="h-full w-full text-zinc-400 stroke-1 hover:text-zinc-50 hover:scale-110 transition-all duration-300" />
-                </Link>
-              )}
-              {experience.website && (
-                <Link
-                  href={experience.website}
+                  href={project.website}
                   target="_blank"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -102,7 +84,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         <DialogHeader className="gap-4">
           <DialogTitle className="text-2xl text-left">Description</DialogTitle>
           <DialogDescription className="text-zinc-400 text-lg text-left">
-            {experience.description}
+            {project.description}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
@@ -110,4 +92,4 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   );
 };
 
-export default ExperienceCard;
+export default ProjectCard;

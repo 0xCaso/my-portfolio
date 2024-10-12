@@ -130,7 +130,7 @@ const HackathonCard: React.FC<HackathonCardProps> = ({
       <DialogContent className="bg-zinc-900 border-none text-zinc-200 max-w-sm md:max-w-2xl h-fit p-4 md:p-6 rounded-xl md:rounded-2xl">
         <DialogTitle className="text-2xl">{hackathon.project}</DialogTitle>
         <div
-          className={`flex flex-col gap-4 overflow-auto max-h-[37rem] md:max-h-[${screenHeight < 1100 ? "38rem" : "50rem"}]`}
+          className={`flex flex-col gap-8 overflow-auto max-h-[37rem] md:max-h-[${screenHeight < 1100 ? "38rem" : "50rem"}]`}
         >
           <DialogDescription className="text-zinc-400 text-base md:text-lg">
             {hackathon.description}

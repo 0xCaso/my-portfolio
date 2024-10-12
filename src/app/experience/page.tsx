@@ -14,7 +14,7 @@ export default function Experience() {
         <Carousel isMobile={width ? width < 768 : false}>
           {experiences.map((exp, index) => (
             <div className="embla__slide" key={index}>
-              <ExperienceCard {...exp} />
+              <ExperienceCard experience={exp} />
             </div>
           ))}
         </Carousel>
