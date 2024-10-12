@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-[Urbanist] bg-[#121212]">
         <BackgroundGradientAnimation>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-svh">
             <Image
               src="/assets/img/me.png"
               alt="Matteo Casonato"

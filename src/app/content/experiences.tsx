@@ -27,7 +27,8 @@ export const experiences: Experience[] = [
       </div>
     ),
     location: "Remote 🌍",
-    description: "Building consumer-friendly apps, farcaster frames, etc..",
+    description:
+      "A Web3 MVP studio building and launching web3 products in a matter of weeks. Currently building MaitonUI and collaborating with XMTP.",
     image: "/experiences/bg_logo.png",
     skills: ["TypeScript", "React.js"],
     github: "https://github.com/builders-garden",
@@ -64,7 +65,7 @@ export const experiences: Experience[] = [
     location: "Zug, Switzerland 🇨🇭",
     image: "/experiences/web3foundation_logo.jpeg",
     description:
-      "Grants Team tasks: Evaluation of the milestone deliveries from a technical perspective (code quality, functionalities).",
+      "Part of the Grants Team (evaluation of the milestone deliveries of grantees projects) and the Spec Team. Completely reworked the specification (https://spec.polkadot.network) and research (https://research.web3.foundation) websites.",
     skills: ["Typescript"],
     github: "https://github.com/w3f",
     twitter: "https://twitter.com/Web3foundation",

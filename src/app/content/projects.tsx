@@ -39,17 +39,17 @@ export const projects: Project[] = [
     image: "/projects/portfolio.png",
   },
   {
-    name: "FL Studio Udemy Italian Course",
+    name: "FL Studio Course",
     date: "September 2020",
     description:
-      "I love music, and I wanted to teach what I know to everybody. This is a complete course on FL Studio, from the basics to the advanced features.",
+      "I love music, and I wanted to teach what I know to everybody. This is a complete course (in Italian) on FL Studio.",
     tags: ["Music", "FL Studio"],
     website:
       "https://www.udemy.com/course/fl-studio-dalla-a-alla-z-il-corso-completo-in-italiano/",
     image: "/projects/udemy.png",
   },
   {
-    name: "OpenZeppelin Contribution",
+    name: "OZ Contribution",
     date: "October 2022",
     description:
       "I contributed to the OpenZeppelin Contracts library, adding a new function 'equals' to the Strings utility.",
@@ -58,10 +58,10 @@ export const projects: Project[] = [
     image: "/projects/openzeppelin.png",
   },
   {
-    name: "DefiLlama Telegram Bot",
+    name: "DefiLlama TG Bot",
     date: "July 2022",
     description:
-      "A bot that you can use to interact with DefiLlama from Telegram. You can search a protocol, compare, see TVL, MCAP, FDV charts, and more.",
+      "(DISCONTINUED) A bot that you can use to interact with DefiLlama from Telegram. You can search protocols, compare, get charts, and more.",
     tags: ["JavaScript", "grammY"],
     github: "https://github.com/0xCaso/defillama-telegram-bot",
     image: "/projects/defillama.png",

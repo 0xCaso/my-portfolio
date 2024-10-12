@@ -4,6 +4,7 @@ import React from "react";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
+  IconBrandX,
   IconBriefcase2,
   IconHome,
   IconMail,
@@ -41,7 +42,7 @@ export const Footer = () => {
     {
       title: "Mail",
       icon: <IconMail className="h-full w-full text-zinc-300 stroke-1" />,
-      href: "mailto:your.email@example.com",
+      href: "mailto:matteocasonato@protonmail.com",
     },
     {
       title: "GitHub",
@@ -59,11 +60,12 @@ export const Footer = () => {
       href: "https://www.linkedin.com/in/matteo-casonato/",
       target: "_blank",
     },
-    // {
-    //   title: "Twitter",
-    //   icon: <IconBrandX className="h-full w-full text-zinc-400" />,
-    //   href: "https://twitter.com/yourusername",
-    // },
+    {
+      title: "Twitter",
+      icon: <IconBrandX className="h-full w-full text-zinc-400" />,
+      href: "https://twitter.com/steven_basalari",
+      target: "_blank",
+    },
   ];
 
   return (
@@ -91,7 +93,7 @@ export const Footer = () => {
           >
             {link.icon}
             <div
-              className={`bg-zinc-300 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
+              className={`bg-zinc-400 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
             />
           </Link>
         ))}
@@ -104,7 +106,7 @@ export const Footer = () => {
           >
             {link.icon}
             <div
-              className={`bg-zinc-300 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
+              className={`bg-zinc-400 h-[1px] mt-1 ${link.href === pathname ? "w-full" : "w-0"} transition-all duration-300 ease-in-out`}
             />
           </Link>
         ))}
